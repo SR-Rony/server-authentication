@@ -18,7 +18,7 @@ app.use(userRoute)
 // server connect
 const connectDB = async ()=>{
     try{
-        await mongoose.connect('mongodb://127.0.0.1:27017/userDB')
+        await mongoose.connect('mongodb+srv://server-auth:rony707@cluster0.vqpoxfv.mongodb.net/userDB?retryWrites=true&w=majority')
         console.log('server is connect');
     }catch(error){
         console.log(`server is not connect`)
@@ -26,6 +26,7 @@ const connectDB = async ()=>{
     }
 }
 connectDB()
+
 
 
 // error pages
